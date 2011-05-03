@@ -1,0 +1,9 @@
+h1 Enter your twitter name
+form(action='/cltjs/member')
+  input(name='id')
+  input(type='submit', value='Go!')
+
+- if (locals.member)
+  h2= member.name + ' lives in ' + member.city
+  - if (member.photo && member.photo.photo_link)
+    img(src=member.photo.photo_link, width=400)
